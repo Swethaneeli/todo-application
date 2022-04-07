@@ -43,7 +43,7 @@ const hasPriorityAndStatusProperties = (requestQuery) => {
   );
 };
 
-const hasProrityProperty = (requestQuery) => {
+const hasPriorityProperty = (requestQuery) => {
   return requestQuery.priority !== undefined;
 };
 
@@ -70,7 +70,7 @@ app.get("/todos/", async (request, response) => {
                     AND priority = '${priority}'
                     AND status = '${status}';`;
       break;
-    case hasProrityProperty(request.query):
+    case hasPriorityProperty(request.query):
       getTodoQuery = `
                 SELECT 
                     * 
@@ -97,7 +97,7 @@ app.get("/todos/", async (request, response) => {
                 FROM 
                     todo
                 WHERE 
-                    todo LIKE '%${search_q}';`;
+                    todo LIKE '%${search_q}%';`;
   }
   data = await db.all(getTodoQuery);
   response.send(
