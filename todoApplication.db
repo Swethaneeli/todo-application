@@ -1,0 +1,19 @@
+CREATE TABLE todo (
+    id INTEGER,
+    todo TEXT,
+    priority TEXT,
+    status TEXT
+);
+
+INSERT INTO 
+    todo ( id, todo, priority, status )
+    VALUES 
+        ( 1, "Learn SQL", "HIGH", "DONE" ),
+        ( 2, "Learn Node JS", "HIGH", "IN PROGRESS"),
+        ( 3, "Watch Movie", "LOW", "TO DO" ),
+        ( 4, "Play Volleyball", "MEDIUM", "TO DO" ),
+        ( 5, "Watch TV", "MEDIUM", "DONE" ),
+        ( 6, "Learn JavaScript", "HIGH", "DONE ),
+        ( 7, "Learn Express JS", "HIGH", "IN PROGRESS" ),
+        ( 8, "Play Chess", "LOW", "DONE"),
+        ( 9, "Going Out", "MEDIUM", "TO DO" );
