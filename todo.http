@@ -1,2 +1,31 @@
 ###
-GET http://localhost:3000/todos/?search_q=Play
+GET http://localhost:3000/todos/?
+
+
+###
+GET http://localhost:3000/todos/7/
+
+
+###
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 11,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO"
+}
+
+
+###
+PUT http://localhost:3000/todos/5/
+Content-Type: application/json
+
+{
+  "todo": "Party Organizing"
+}
+
+
+###
+DELETE http://localhost:3000/todos/6/
